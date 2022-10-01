@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-size: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bg-content {
+    background-image: url('https://1.bp.blogspot.com/-XoDyK5B0jPM/YVRT6YwVzjI/AAAAAAABVuU/XqaXlkShw7Qdm43m7c_sKl-yndedoDetQCLcBGAsYHQ/s2560/Linda%2BPaisagem%2BMinimalista%2BWallpaper.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    filter: brightness(60%);
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    width: 50%;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    padding: 5px 10px;
+    padding-left: 40px;
+    height: 10%;
+    color: #fff;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.search input[type=text] {
+    width: 90%;
+    font-size: 2rem;
+    padding: 5px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+
+.search button {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    height: 100%;
+    border-radius: 100px;
+}
+
+.search button svg {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.search input[type=text]::placeholder {
+    color: #fff;
+    opacity: 60%;
+    font-style: italic;
+}
+
+.content {
+    flex: 1;
+    padding: 25px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-wheater {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.info-wheater .temperature {
+    font-size: 7rem;
+}
+
+.info-wheater .city {
+    font-size: 2.5rem;
+}
+
+.info-wheater .condition {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+}
+
+.info-wheater .condition img {
+    height: 90px;
+}
+
+.forecast {
+    flex: 1;
+    width: 100%;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(160px,1fr);
+    overflow-x: auto;
+    grid-gap: 15px;
+}
+
+.forecast .card-day {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+    text-shadow: 3px 3px 3px #030302;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 1030px){
+    .search {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .search input[type=text] {
+        font-size: 1.2rem;
+    }
+}
